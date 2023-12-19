@@ -82,7 +82,7 @@ drop table if exists field_of_study cascade;
 create table field_of_study (
 	id serial primary key,
 	faculty_id int not null references faculty (id),
-	profle_id int references profile (id),
+	profile_id int references profile (id),
 	name varchar(64) not null,
 	year int check (year > 0)
 );
