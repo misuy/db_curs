@@ -33,7 +33,7 @@ def generate_profile(count: int):
     return s[:-1] + ";"
 
 def generate_image(profiles_count: int, count: int):
-    s = "insert into profile (profile_id, file_path, uploaded) values"
+    s = "insert into image (profile_id, file_path, uploaded) values"
     for i in range(1, count+1):
         s += str(" ({}, \'{}\', timestamp \'2023-12-19 23:12:54\'),").format(random.randint(1, profiles_count), image_path_pool[random.randint(0, len(image_path_pool)-1)])
     return s[:-1] + ";"
